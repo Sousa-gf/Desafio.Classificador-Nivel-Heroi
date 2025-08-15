@@ -35,7 +35,7 @@ Ao final deve se exibir uma mensagem:
 
 const prompt = require("prompt-sync")();
 
-const nome = prompt("Digite seu nome de herói: \n");
+const nome = prompt("Digite seu nome de herói:");
 console.log(`
   Olá, ${nome}!
   Seja bem-vindo para contar sua historia de guerreiro e seus feitos lendarios!
@@ -112,7 +112,7 @@ let TotalAbates = [
 
 RatosAbatidos = Number(
   prompt(
-    "Nos conte sobre seus abates aventureiro, quantos Ratos das Sombras você abateu: \n"
+    "Nos conte sobre seus abates aventureiro, quantos Ratos das Sombras você abateu: "
   )
 );
 
@@ -122,36 +122,36 @@ while (RatosAbatidos > 1000) {
     aventureiros, não permite uma quantidade de abates tão grande para um só
     aventureiro de um unico monstro, no bestiario o limite de abates desse
     monstro é 1000, por favor, digite o numero verdadeiro. `);
-  RatosAbatidos = Number(prompt("Quantos Ratos das Sombras você abateu: \n"));
+  RatosAbatidos = Number(prompt("Quantos Ratos das Sombras você abateu:"));
 }
 let XPRatos = RatosAbatidos * 0.3;
 console.log(XPRatos);
 
 if (XPRatos < 1001) {
-  MorcegosAbatidos = Number(
-    prompt("Quantos morcegos Venenosos você abateu: \n")
+  MorcegosVenenososAbatidos = Number(
+    prompt("Quantos Morcegos Venenosos você abateu: ")
   );
-  while (MorcegosAbatidos > 1000) {
+  while (MorcegosVenenososAbatidos > 1000) {
     console.log(`
     No bestiario o limite de abates desse monstro é 1000, 
     por favor, digite o numero verdadeiro `);
-    MorcegosAbatidos = Number(
-      prompt("Quantos Morcegos Venenosos você abateu: \n")
+    MorcegosVenenososAbatidos = Number(
+      prompt("Quantos Morcegos Venenosos você abateu: ")
     );
   }
 }
-let XPMorcegos = MorcegosAbatidos * 0.35;
+let XPMorcegos = MorcegosVenenososAbatidos * 0.35;
 
 if (XPRatos + XPMorcegos <= 1001) {
   GoblinsCovardesAbatidos = Number(
-    prompt("Quantos Goblins Covardes você abateu: \n")
+    prompt("Quantos Goblins Covardes você abateu: ")
   );
   while (GoblinsCovardesAbatidos > 750) {
     console.log(`
     No bestiario o limite de abates desse monstro é 750, 
     por favor, digite o numero verdadeiro `);
     GoblinsCovardesAbatidos = Number(
-      prompt("Quantos Goblins Covardes você abateu: \n")
+      prompt("Quantos Goblins Covardes você abateu: ")
     );
   }
 }
@@ -164,7 +164,7 @@ console.log(`Seu XP é ${totalXPlvlF}`);
 
 if (totalXPlvlF >= 1001) {
   LobosFamintosAbatidos = Number(
-    prompt("Quantos Lobos Famintos você abateu: \n")
+    prompt("Quantos Lobos Famintos você abateu: ")
   );
 }
 while (LobosFamintosAbatidos > 400) {
@@ -172,21 +172,19 @@ while (LobosFamintosAbatidos > 400) {
     No bestiario o limite de abates desse monstro é 400, 
     por favor, digite o numero verdadeiro `);
   LobosFamintosAbatidos = Number(
-    prompt("Quantos Lobos Famintos você abateu: \n")
+    prompt("Quantos Lobos Famintos você abateu: ")
   );
 }
 let XPLobos = LobosFamintosAbatidos * 0.7;
 
 if (XPLobos + totalXPlvlF >= 1001 && XPLobos + totalXPlvlF < 2000) {
-  SlimesAcidosAbatidos = Number(
-    prompt("Quantos Slimes Ácidos você abateu: \n")
-  );
+  SlimesAcidosAbatidos = Number(prompt("Quantos Slimes Ácidos você abateu: "));
   while (SlimesAcidosAbatidos > 400) {
     console.log(`
     No bestiario o limite de abates desse monstro é 400, 
     por favor, digite o numero verdadeiro `);
     SlimesAcidosAbatidos = Number(
-      prompt("Quantos Slimes Ácidos você abateu: \n")
+      prompt("Quantos Slimes Ácidos você abateu: ")
     );
   }
 }
@@ -197,14 +195,14 @@ if (
   XPLobos + XPSlime + totalXPlvlF < 2000
 ) {
   GoblinsGuerreirosAbatidos = Number(
-    prompt("Quantos Goblins Guerreiros você abateu: \n")
+    prompt("Quantos Goblins Guerreiros você abateu: ")
   );
   while (GoblinsGuerreirosAbatidos > 420) {
     console.log(`
     No bestiario o limite de abates desse monstro é 420, 
     por favor, digite o numero verdadeiro `);
     GoblinsGuerreirosAbatidos = Number(
-      prompt("Quantos Goblins Guerreiros você abateu: \n")
+      prompt("Quantos Goblins Guerreiros você abateu: ")
     );
   }
 }
@@ -214,7 +212,7 @@ let totalXPlvlE = Number([XPLobos + XPSlime + XPGoblinsG]);
 // Agora vamos definir quantos monstros de Level D foram abatidos.
 if (totalXPlvlF + totalXPlvlE >= 2001) {
   EsqueletosGuerreirosAbatidos = Number(
-    prompt("Quantos Esqueletos Guerreiros você abateu: \n")
+    prompt("Quantos Esqueletos Guerreiros você abateu: ")
   );
 }
 while (EsqueletosGuerreirosAbatidos > 70) {
@@ -222,7 +220,7 @@ while (EsqueletosGuerreirosAbatidos > 70) {
     No bestiario o limite de abates desse monstro é 70, 
     por favor, digite o numero verdadeiro `);
   EsqueletosGuerreirosAbatidos = Number(
-    prompt("Quantos Esqueletos Guerreiros você abateu: \n")
+    prompt("Quantos Esqueletos Guerreiros você abateu: ")
   );
 }
 let XPEsqueletosG = EsqueletosGuerreirosAbatidos * 16;
@@ -231,12 +229,12 @@ if (
   XPEsqueletosG + totalXPlvlE + totalXPlvlF >= 2001 &&
   XPEsqueletosG + totalXPlvlE + totalXPlvlF < 5000
 ) {
-  HarpiasAbatidas = Number(prompt("Quantas Harpias você abateu: \n"));
+  HarpiasAbatidas = Number(prompt("Quantas Harpias você abateu: "));
   while (HarpiasAbatidas > 60) {
     console.log(`
     No bestiario o limite de abates desse monstro é 60, 
     por favor, digite o numero verdadeiro `);
-    HarpiasAbatidas = Number(prompt("Quantas Harpias você abateu: \n"));
+    HarpiasAbatidas = Number(prompt("Quantas Harpias você abateu: "));
   }
 }
 let XPHarpias = HarpiasAbatidas * 18;
@@ -246,14 +244,14 @@ if (
   XPEsqueletosG + XPHarpias + totalXPlvlF + totalXPlvlE < 5000
 ) {
   OrcsSelvagensAbatidos = Number(
-    prompt("Quantos Orcs Selvagens você abateu: \n")
+    prompt("Quantos Orcs Selvagens você abateu: ")
   );
   while (OrcsSelvagensAbatidos > 40) {
     console.log(`
     No bestiario o limite de abates desse monstro é 40, 
     por favor, digite o numero verdadeiro `);
     OrcsSelvagensAbatidos = Number(
-      prompt("Quantos Orcs Selvagens você abateu: \n")
+      prompt("Quantos Orcs Selvagens você abateu: ")
     );
   }
 }
@@ -263,7 +261,7 @@ let totalXPlvlD = Number([XPEsqueletosG + XPHarpias + XPOrcsS]);
 // Agora vamos definir quantos monstros de Level C foram abatidos.
 if (totalXPlvlF + totalXPlvlE + totalXPlvlD >= 5001) {
   TrollsDaMontanhaAbatidos = Number(
-    prompt("Quantos Trolls da Montanha você abateu: \n")
+    prompt("Quantos Trolls da Montanha você abateu: ")
   );
 }
 while (TrollsDaMontanhaAbatidos > 14) {
@@ -271,7 +269,7 @@ while (TrollsDaMontanhaAbatidos > 14) {
     No bestiario o limite de abates desse monstro é 14, 
     por favor, digite o numero verdadeiro `);
   TrollsDaMontanhaAbatidos = Number(
-    prompt("Quantos Trolls da Montanha você abateu: \n")
+    prompt("Quantos Trolls da Montanha você abateu: ")
   );
 }
 let XPTrolls = TrollsDaMontanhaAbatidos * 30;
@@ -281,14 +279,14 @@ if (
   XPTrolls + totalXPlvlE + totalXPlvlF + totalXPlvlD < 6000
 ) {
   GolemsDePedraAbatidos = Number(
-    prompt("Quantos Golens de Pedra você abateu: \n")
+    prompt("Quantos Golens de Pedra você abateu: ")
   );
   while (GolemsDePedraAbatidos > 10) {
     console.log(`
     No bestiario o limite de abates desse monstro é 10, 
     por favor, digite o numero verdadeiro `);
     GolemsDePedraAbatidos = Number(
-      prompt("Quantos Slimes Ácidos você abateu: \n")
+      prompt("Quantos Golens de Pedra você abateu: ")
     );
   }
 }
@@ -299,14 +297,14 @@ if (
   XPGolens + XPTrolls + totalXPlvlF + totalXPlvlE + totalXPlvlD < 6000
 ) {
   SerpentesGigantesAbatidas = Number(
-    prompt("Quantas Serpentes Gigantes você abateu: \n")
+    prompt("Quantas Serpentes Gigantes você abateu: ")
   );
   while (SerpentesGigantesAbatidas > 10) {
     console.log(`
     No bestiario o limite de abates desse monstro é 10, 
     por favor, digite o numero verdadeiro `);
     SerpentesGigantesAbatidas = Number(
-      prompt("Quantas Serpentes Gigantes você abateu: \n")
+      prompt("Quantas Serpentes Gigantes você abateu: ")
     );
   }
 }
@@ -316,7 +314,7 @@ let totalXPlvlC = Number([XPTrolls + XPGolens + XPSerpentes]);
 // Agora vamos definir quantos monstros de Level B foram abatidos.
 if (totalXPlvlF + totalXPlvlE + totalXPlvlD + totalXPlvlC >= 6001) {
   OgrosBrutamontesAbatidos = Number(
-    prompt("Quantos Ogros Brutamontes você abateu: \n")
+    prompt("Quantos Ogros Brutamontes você abateu: ")
   );
 }
 while (OgrosBrutamontesAbatidos > 15) {
@@ -324,7 +322,7 @@ while (OgrosBrutamontesAbatidos > 15) {
     No bestiario o limite de abates desse monstro é 15, 
     por favor, digite o numero verdadeiro `);
   OgrosBrutamontesAbatidos = Number(
-    prompt("Quantos Ogros Brutamontes você abateu: \n")
+    prompt("Quantos Ogros Brutamontes você abateu: ")
   );
 }
 let XPOgrosB = OgrosBrutamontesAbatidos * 42;
@@ -333,14 +331,12 @@ if (
   XPOgrosB + totalXPlvlE + totalXPlvlF + totalXPlvlD + totalXPlvlC > 6001 &&
   XPOgrosB + totalXPlvlE + totalXPlvlF + totalXPlvlD + totalXPlvlC <= 8000
 ) {
-  ManticorasAbatidas = Number(prompt("Quantas Mantícoras você abateu: \n"));
+  ManticorasAbatidas = Number(prompt("Quantas Mantícoras você abateu: "));
   while (ManticorasAbatidas > 15) {
     console.log(`
     No bestiario o limite de abates desse monstro é 15, 
     por favor, digite o numero verdadeiro `);
-    ManticorasAbatidas = Number(
-      prompt("Quantos Slimes Ácidos você abateu: \n")
-    );
+    ManticorasAbatidas = Number(prompt("Quantos Mantícoras você abateu: "));
   }
 }
 let XPManticoras = ManticorasAbatidas * 50;
@@ -362,14 +358,14 @@ if (
     8000
 ) {
   CavaleirosAmaldicoadoAbatidos = Number(
-    prompt("Quantos Cavaleiros Amaldiçoados você abateu: \n")
+    prompt("Quantos Cavaleiros Amaldiçoados você abateu: ")
   );
   while (CavaleirosAmaldicoadoAbatidos > 13) {
     console.log(`
     No bestiario o limite de abates desse monstro é 13, 
     por favor, digite o numero verdadeiro `);
     CavaleirosAmaldicoadoAbatidos = Number(
-      prompt("Quantos Cavaleiros Amaldiçoados você abateu: \n")
+      prompt("Quantos Cavaleiros Amaldiçoados você abateu: ")
     );
   }
 }
@@ -581,7 +577,7 @@ while (ranking == "") {
 
 const nivelEXPdosMonstros = [
   ["Rato das Sombras", "F", 0.3, RatosAbatidos],
-  ["Morcego venenoso", "F", 0.35, MorcegosVenenososAbatidos],
+  ["Morcego Venenoso", "F", 0.35, MorcegosVenenososAbatidos],
   ["Goblin Covarde", "F", 0.5, GoblinsCovardesAbatidos],
   ["Lobo Faminto", "E", 0.7, LobosFamintosAbatidos],
   ["Slime Ácido", "E", 0.8, SlimesAcidosAbatidos],
@@ -592,22 +588,22 @@ const nivelEXPdosMonstros = [
   ["Troll da Montanha", "C", 30, TrollsDaMontanhaAbatidos],
   ["Golem de Pedra", "C", 32, GolemsDePedraAbatidos],
   ["Serpente Gigante", "C", 28, SerpentesGigantesAbatidas],
-  ["Ogro brutamontes", "B", 42, OgrosBrutamontesAbatidos],
+  ["Ogro Brutamontes", "B", 42, OgrosBrutamontesAbatidos],
   ["Mantícora", "B", 50, ManticorasAbatidas],
   ["Cavaleiro Amaldiçoado", "B", 48, CavaleirosAmaldicoadoAbatidos],
-  ["Dragão menor", "A", 1000, DragoesMenoresAbatidos],
+  ["Dragão Menor", "A", 1000, DragoesMenoresAbatidos],
   ["Quimera", "A", 1000, QuimerasAbatidas],
   ["Fênix Negra", "A", 1000, FenixesNegrasAbatidas],
   ["Dragão Ancião", "S", 971, DragoesAnciaosAbatidos],
   ["Leviatã", "S", 971, LeviatasAbatidos],
-  ["Aracne rainha", "S", 971, AracnesRainhasAbatidas],
+  ["Aracne Rainha", "S", 971, AracnesRainhasAbatidas],
   ["Titã Primordial", "SS", 9999999999, TitasPrimordiaisAbatidos],
   ["Serafim da Ruína", "SS", 9999999999, SerafinsDaRuinaAbatidos],
   ["Devorador de Mundos", "SS", 9999999999, DevoradoresDeMundosAbatidos],
 ];
 
 let imprimirBestiario = prompt(
-  "Você gostaria de imprimir nosso bestiario? (sim/nao) \n "
+  "Você gostaria de imprimir nosso bestiario? (sim/nao) "
 );
 
 while (
