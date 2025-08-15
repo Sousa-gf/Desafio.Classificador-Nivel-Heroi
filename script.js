@@ -125,7 +125,6 @@ while (RatosAbatidos > 1000) {
   RatosAbatidos = Number(prompt("Quantos Ratos das Sombras você abateu:"));
 }
 let XPRatos = RatosAbatidos * 0.3;
-console.log(XPRatos);
 
 if (XPRatos < 1001) {
   MorcegosVenenososAbatidos = Number(
@@ -158,7 +157,6 @@ if (XPRatos + XPMorcegos <= 1001) {
 let XPGoblinsC = GoblinsCovardesAbatidos * 0.5;
 
 let totalXPlvlF = Number([XPRatos + XPMorcegos + XPGoblinsC]);
-console.log(`Seu XP é ${totalXPlvlF}`);
 
 // Agora vamos definir quantos monstros de Level E foram abatidos.
 
@@ -417,7 +415,7 @@ if (XPpreBoss >= 8001) {
 }
 
 let XPBoss1 = Number([XPpreBoss + BossMenor]);
-console.log(XPBoss1);
+
 // Agora vamos definir quantos monstros de Level A foram abatidos.
 if (XPBoss1 >= 9001) {
   console.log(`
@@ -499,7 +497,7 @@ let XPBoss3 = Number([XPBoss2 + BossLendario]);
 let ranking = "";
 
 let XPHeroi = Number(XPBoss3);
-console.log(XPHeroi);
+console.log(`Seu XP total como Herói é ${XPHeroi}`);
 //mudança após finalizar while(ranking == "")
 
 while (ranking == "") {
