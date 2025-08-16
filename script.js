@@ -637,4 +637,4 @@ if (imprimirBestiario.toLocaleUpperCase() == "SIM") {
 }
 
 console.log(`
-  O héroi de nome ${nome} tem seu rank classifico como ${ranking}`);
+  O héroi de nome ${nome} tem seu rank classificado como ${ranking}`);
